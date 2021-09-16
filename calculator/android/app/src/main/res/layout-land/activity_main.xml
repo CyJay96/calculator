@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="73dp">
+
+    <Button
+        android:id="@+id/second_page"
+        android:layout_width="125dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="131dp"
+        android:layout_marginStart="131dp"
+        android:text="ПОГНАЛИ"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/third_page"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/third_page" />
+
+    <Button
+        android:id="@+id/third_page"
+        android:layout_width="125dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="47dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginRight="149dp"
+        android:text="ПОЕХАЛИ"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/dis1_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="41dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Преобразуйте систему линейных алгебраических уравнений к виду:"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/dis1_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/equations1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="a11x1 + a12x2 + ... + a1nxn = b1,"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dis1_1" />
+
+    <TextView
+        android:id="@+id/equation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="a21x1 + a22x2 + ... + a2nxn = b2,"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/equations1"
+        app:layout_constraintTop_toBottomOf="@+id/equations1" />
+
+    <TextView
+        android:id="@+id/equation3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="..."
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/equation2"
+        app:layout_constraintTop_toBottomOf="@+id/equation2" />
+
+    <TextView
+        android:id="@+id/equation4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="am1x1 + am2x2 + ... + amnxn = bm,"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/equation3"
+        app:layout_constraintTop_toBottomOf="@+id/equation3" />
+
+    <TextView
+        android:id="@+id/dis1_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="где n = m"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equation4" />
+
+    <TextView
+        android:id="@+id/dis1_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="16dp"
+        android:text="Решение квадратного и биквадратного уравнения вида:"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dis1_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dis1_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="ax^2 + bx + c = 0,"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/dis1_3"
+        app:layout_constraintTop_toBottomOf="@+id/dis1_3" />
+
+    <TextView
+        android:id="@+id/dis1_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="ax^4 + bx^2 + c = 0"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/dis1_4"
+        app:layout_constraintTop_toBottomOf="@+id/dis1_4" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EquationActivity"
+    tools:layout_editor_absoluteY="73dp">
+
+    <TextView
+        android:id="@+id/dis2_1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Введите количество переменных и коэффициенты системы:"
+        android:textColor="@android:color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enter_n"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="n"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dis2_1" />
+
+    <Button
+        android:id="@+id/salve"
+        android:layout_width="125dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="172dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onButtonClick"
+        android:text="РЕШИТЬ"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/answer"
+        app:layout_constraintEnd_toStartOf="@+id/coeff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_n" />
+
+    <EditText
+        android:id="@+id/answer"
+        android:layout_width="225dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:password="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TableLayout
+        android:id="@+id/coeff"
+        android:layout_width="371dp"
+        android:layout_height="278dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.704">
+
+        <TableRow
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/a11"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a12"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a13"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a14"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a15"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a16"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a17"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/a21"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a22"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a23"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a24"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/a25"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a26"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a27"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/a31"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a32"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a33"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a34"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a35"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a36"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a37"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/a41"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a42"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a43"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a44"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a45"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a46"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a47"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/a51"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a52"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a53"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a54"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a55"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a56"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a57"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/line6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/a61"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a62"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a63"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a64"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a65"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/a66"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/a67"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="number|numberSigned|numberDecimal"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
