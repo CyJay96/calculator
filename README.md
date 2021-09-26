@@ -1,3 +1,5 @@
-## Project deploy:
+### Calculator for calculating systems of linear algebraic
+### equations, as well as for calculating square and
+### biquadrate equations, including complex numbers
 
-### [![Click here](button_icon.png)](https://cyjay96.github.io/EcuationCalc/)
+Start date of development: March-February 2018
