@@ -3216,9 +3216,9 @@ object Form1: TForm1
       object dis4_4: TLabel
         Left = 24
         Top = 104
-        Width = 346
+        Width = 345
         Height = 14
-        Caption = 'and biquadratic equations, including complex numbers.'
+        Caption = 'and biquadrate equations, including complex numbers.'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
