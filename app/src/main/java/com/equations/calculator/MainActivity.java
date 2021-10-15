@@ -38,22 +38,22 @@ public final class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.item_exit:
                 AlertDialog.Builder exit = new AlertDialog.Builder(MainActivity.this);
-                exit.setMessage("Вы хотите закрыть приложение?")
+                exit.setMessage("Do you want to close the app?")
                         .setCancelable(false)
-                        .setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 finish();
                             }
                         })
-                        .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialogInterface.cancel();
                             }
                         });
                 AlertDialog alertDialog = exit.create();
-                alertDialog.setTitle("Закрытие приложения");
+                alertDialog.setTitle("Closing the application");
                 alertDialog.show();
         }
         return super.onOptionsItemSelected(item);

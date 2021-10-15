@@ -25,7 +25,7 @@ public final class QuadraticActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         menu.getItem(1).setVisible(false);
-        menu.getItem(0).setTitle("НАЗАД");
+        menu.getItem(0).setTitle("CANCEL");
 
         return true;
     }
@@ -130,11 +130,11 @@ public final class QuadraticActivity extends AppCompatActivity {
                     answer_q.setText("x[1] = " + f[1] + "\n" + "x[2] = " + f[2]);
                 }
             } else {
-                answer_q.setText("Ошибка:\nДеление на ноль");
+                answer_q.setText("Error:\nDivision by zero");
             }
 
         } catch (Exception e) {
-            answer_q.setText("Ошибка:\nЧто-то пошло не так");
+            answer_q.setText("Error:\nSomething went wrong");
         }
     }
 
@@ -232,11 +232,11 @@ public final class QuadraticActivity extends AppCompatActivity {
                     answer_biq.setText("x[1] = " + f[1] + "\n" + "x[2] = " + f[2] + "\n" + "x[3] = " + f[3] + "\n" + "x[4] = " + f[4]);
                 }
             } else {
-                answer_biq.setText("Ошибка:\nДеление на ноль");
+                answer_biq.setText("Eror:\nDivision by zero");
             }
 
         } catch (Exception e) {
-            answer_biq.setText("Ошибка:\nЧто-то пошло не так");
+            answer_biq.setText("Error:\nSomething went wrong");
         }
     }
 }

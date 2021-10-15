@@ -33,7 +33,7 @@ public final class InfoActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         menu.getItem(1).setVisible(false);
-        menu.getItem(0).setTitle("НАЗАД");
+        menu.getItem(0).setTitle("CANCEL");
 
         return true;
     }

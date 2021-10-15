@@ -28,7 +28,7 @@ public final class EquationActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         menu.getItem(1).setVisible(false);
-        menu.getItem(0).setTitle("НАЗАД");
+        menu.getItem(0).setTitle("CANCEL");
 
         return true;
     }
@@ -158,7 +158,7 @@ public final class EquationActivity extends AppCompatActivity {
             answer.setText(s);
 
         } catch (Exception e) {
-            answer.setText("Ошибка:\nЧто-то пошло не так");
+            answer.setText("Error:\nSomething went wrong");
         }
     }
 }

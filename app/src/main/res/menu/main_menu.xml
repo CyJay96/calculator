@@ -5,11 +5,11 @@
     <item
         android:id="@+id/item_exit"
         android:orderInCategory="1"
-        android:title="ВЫХОД"
+        android:title="EXIT"
         app:showAsAction="always" />
     <item
         android:id="@+id/item_info"
         android:orderInCategory="0"
-        android:title="ИНФА"
+        android:title="INFO"
         app:showAsAction="always" />
 </menu>
