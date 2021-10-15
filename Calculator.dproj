@@ -113,7 +113,7 @@
             <Form>Form2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="ForgetPass1.pas">
+        <DCCReference Include="ForgotPass1.pas">
             <Form>Form3</Form>
             <FormType>dfm</FormType>
         </DCCReference>

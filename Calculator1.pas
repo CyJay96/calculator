@@ -267,7 +267,7 @@ end;
 
 procedure TForm1.link_downClick(Sender: TObject); // DOWNLOAD
 begin
-  ShellExecute(handle, 'open', 'https://cyjay96.github.io/calculator/', nil,
+  ShellExecute(handle, 'open', 'https://cyjay96.github.io/webcalculator/', nil,
     nil, SW_SHOW);
 end;
 
@@ -424,15 +424,15 @@ begin
         Values.Cells[0, j] := 'm' + IntToStr(j);
     end
     else if n <> m then
-      ShowMessage('Мы ещё не готовы решать уравнения, если n != m')
+      ShowMessage('We are not yet ready to solve the equations if N != M')
     else
-      ShowMessage('Количество уравнений и переменных не должно превышать 1000');
+      ShowMessage('The number of equations and variables should not exceed 1000');
 
   except
     on EConvertError do
-      ShowMessage('Введите n и m')
+      ShowMessage('Enter N and M')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -455,10 +455,10 @@ begin
       for j := 1 to n + 1 do
         ae[j, i] := StrToFloat(Values.Cells[j, i]);
 
-    for i := 1 to n do // запоминаем свободные члены
+    for i := 1 to n do // remember free members
       be[i] := ae[n + 1, i];
 
-    for k := 1 to n do // прямой ход Гаусса
+    for k := 1 to n do // straight Gaussian stroke
       for j := k + 1 to n do
       begin
         r := ae[k, j] / ae[k, k];
@@ -467,7 +467,7 @@ begin
         be[j] := be[j] - r * be[k];
       end;
 
-    for k := n downto 1 do // обратный ход Гаусса
+    for k := n downto 1 do // reverse Gaussian stroke
     begin
       r := 0;
       for j := k + 1 to n do
@@ -482,7 +482,7 @@ begin
       Answer.Lines.Add('x[' + IntToStr(i) + '] = ' + FloatToStr(xe[i]));
     Answer.Lines.Add('');
 
-    Error.Lines.Add('Проверка:');
+    Error.Lines.Add('Check:');
     for j := 1 to n do
     begin
       for i := 1 to n do
@@ -491,19 +491,19 @@ begin
         check_bool := true;
     end;
     if check_bool then
-      Error.Lines.Add('Решение верное!')
+      Error.Lines.Add('The decision is correct!')
     else
-      Error.Lines.Add('Решение неверное!');
+      Error.Lines.Add('The decision is wrong!');
     Error.Lines.Add('');
 
   except
     on EConvertError do
-      ShowMessage('Введите коэффициенты')
+      ShowMessage('Enter the coefficients of the system')
     else
     begin
-      Answer.Lines.Add('Ошибка:');
-      Answer.Lines.Add('Возможно произошло деление на ноль');
-      Answer.Lines.Add('Или система несовместна')
+      Answer.Lines.Add('Something went wrong:');
+      Answer.Lines.Add('Division by zero may have occurred');
+      Answer.Lines.Add('Or the system is incompatible')
     end;
   end;
 end;
@@ -563,9 +563,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите коэффициенты')
+      ShowMessage('Enter the coefficients of the equation')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -677,9 +677,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите коэффициенты')
+      ShowMessage('Enter the coefficients of the equation')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -696,9 +696,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите числа')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -715,9 +715,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите числа')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -734,9 +734,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите числа')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -753,9 +753,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите числа')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -778,9 +778,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите числа')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -797,9 +797,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите числа')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -816,9 +816,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите числа')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -836,12 +836,12 @@ begin
       if (b >= 0) and (frac(b) = 0) then
         AnswerNum12.Text := FloatToStr(fact(b))
       else if (b < 0) and (frac(b) = 0) then
-        ShowMessage('Значение должно быть больше или равно нулю')
+        ShowMessage('The value must be greater than or equal to zero')
       else if (b >= 0) and (frac(b) <> 0) then
-        ShowMessage('Значение должно быть целочисленным')
+        ShowMessage('The value must be an integer')
       else
         ShowMessage
-          ('Значение должно быть целочисленным и'#13'больше или равно нулю');
+          ('The value must be an integer and '#13' is greater than or equal to zero');
     end
     else
     begin
@@ -849,19 +849,19 @@ begin
       if (a >= 0) and (frac(a) = 0) then
         AnswerNum12.Text := FloatToStr(fact(a))
       else if (a < 0) and (frac(a) = 0) then
-        ShowMessage('Значение должно быть больше или равно нулю')
+        ShowMessage('The value must be greater than or equal to zero')
       else if (a >= 0) and (frac(a) <> 0) then
-        ShowMessage('Значение должно быть целочисленным')
+        ShowMessage('The value must be an integer')
       else
         ShowMessage
-          ('Значение должно быть целочисленным и'#13'больше или равно нулю');
+          ('The value must be an integer and '#13' is greater than or equal to zero');
     end;
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -878,9 +878,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите числа')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -897,7 +897,7 @@ begin
       if b > 0 then
         AnswerNum12.Text := FloatToStr(ln(b))
       else
-        ShowMessage('Значение должно быть больше нуля');
+        ShowMessage('The value must be greater than zero');
     end
     else
     begin
@@ -905,14 +905,14 @@ begin
       if a > 0 then
         AnswerNum12.Text := FloatToStr(ln(a))
       else
-        ShowMessage('Значение должно быть больше нуля');
+        ShowMessage('The value must be greater than zero');
     end;
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -936,9 +936,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -957,13 +957,13 @@ begin
     if (a > 0) and (b > 0) then
       AnswerNum12.Text := IntToStr(nok1(a, b))
     else
-      ShowMessage('Значения должны быть больше и равны нулю');
+      ShowMessage('The values must be greater than and equal to zero');
 
   except
     on EConvertError do
-      ShowMessage('Введите целые числа больше или равные нулю')
+      ShowMessage('Enter integers greater than or equal to zero')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -982,13 +982,13 @@ begin
     if (a > 0) and (b > 0) then
       AnswerNum12.Text := IntToStr(nod1(a, b))
     else
-      ShowMessage('Значения должны быть больше и равны нулю');
+      ShowMessage('The values must be greater than and equal to zero');
 
   except
     on EConvertError do
-      ShowMessage('Введите целые числа больше или равные нулю')
+      ShowMessage('Enter integers greater than or equal to zero')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1079,9 +1079,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1119,9 +1119,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1159,9 +1159,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1199,9 +1199,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1239,9 +1239,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1279,9 +1279,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1319,9 +1319,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1359,9 +1359,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1399,9 +1399,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1439,9 +1439,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1479,9 +1479,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1519,9 +1519,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1559,9 +1559,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1599,9 +1599,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1639,9 +1639,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1679,9 +1679,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1719,9 +1719,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1759,9 +1759,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1799,9 +1799,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1839,9 +1839,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1879,9 +1879,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1919,9 +1919,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -1966,9 +1966,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 
@@ -2022,9 +2022,9 @@ begin
 
   except
     on EConvertError do
-      ShowMessage('Введите число')
+      ShowMessage('Enter the numbers')
     else
-      ShowMessage('Ошибка');
+      ShowMessage('Something went wrong');
   end;
 end;
 

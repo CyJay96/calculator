@@ -1,4 +1,4 @@
-﻿unit ForgetPass1;
+﻿unit ForgotPass1;
 
 interface
 
@@ -21,7 +21,7 @@ type
 
 const
   pass = '7724';
-  dop_pass = 'пароль';
+  dop_pass = 'password';
 
 var
   Form3: TForm3;
@@ -33,9 +33,11 @@ implementation
 procedure TForm3.OKClick(Sender: TObject);
 begin
   if EnterPass.Text = dop_pass then
-    ShowMessage('Ваш пароль: ' + pass)
+    ShowMessage('Your password: ' + pass)
+  else if EnterPass.Text = '' then
+    ShowMessage('You haven''t entered anything')
   else
-    ShowMessage('Пароль неверный');
+    ShowMessage('The password is incorrect');
 end;
 
 end.

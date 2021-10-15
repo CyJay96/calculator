@@ -4,7 +4,7 @@ uses
   Vcl.Forms,
   Calculator1 in 'Calculator1.pas' {Form1},
   PIN1 in 'PIN1.pas' {Form2},
-  ForgetPass1 in 'ForgetPass1.pas' {Form3};
+  ForgotPass1 in 'ForgotPass1.pas' {Form3};
 
 {$R *.res}
 

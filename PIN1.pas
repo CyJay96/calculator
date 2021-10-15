@@ -3,7 +3,7 @@
 interface
 
 uses
-  Calculator1, ForgetPass1,
+  Calculator1, ForgotPass1,
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
   Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.Grids, Vcl.Imaging.pngimage,
@@ -186,7 +186,7 @@ begin
   if EnterPass = pass then
     Form1.Show
   else if EnterPass2.Text = '' then
-    ShowMessage('Вы ничего не ввели')
+    ShowMessage('You haven''t entered anything')
   else
   begin
     BorderIcons := [];
@@ -199,8 +199,8 @@ begin
     j := 10;
     a := random(14) + 2;
     b := random(14) + 2;
-    Hello.Caption := 'Решите ' + IntToStr(j) + ' примеров';
-    Question.Caption := 'Сколько будет ' + IntToStr(a) + ' * ' + IntToStr(b);
+    Hello.Caption := 'Solve ' + IntToStr(j) + ' mathematical examples';
+    Question.Caption := 'How much is ' + IntToStr(a) + ' * ' + IntToStr(b);
   end;
 end;
 
@@ -221,10 +221,10 @@ begin
   begin
     dec(j);
     Answer.Text := '';
-    Hello.Caption := 'Решите ' + IntToStr(j) + ' примеров';
+    Hello.Caption := 'Solve ' + IntToStr(j) + ' mathematical examples';
     a := random(14) + 2;
     b := random(14) + 2;
-    Question.Caption := 'Сколько будет ' + IntToStr(a) + ' * ' + IntToStr(b);
+    Question.Caption := 'How much is ' + IntToStr(a) + ' * ' + IntToStr(b);
     if j = 0 then
     begin
       BorderIcons := [biSystemMenu, biMinimize];
@@ -240,15 +240,15 @@ begin
     end;
   end
   else if Answer.Text = '' then
-    ShowMessage('Вы ничего не ввели')
+    ShowMessage('You haven''t entered anything')
   else
   begin
     inc(j);
     Answer.Text := '';
-    Hello.Caption := 'Решите ' + IntToStr(j) + ' примеров';
+    Hello.Caption := 'Solve ' + IntToStr(j) + ' mathematical examples';
     a := random(14) + 2;
     b := random(14) + 2;
-    Question.Caption := 'Сколько будет ' + IntToStr(a) + ' * ' + IntToStr(b);
+    Question.Caption := 'How much is ' + IntToStr(a) + ' * ' + IntToStr(b);
   end;
 end;
 

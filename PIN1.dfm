@@ -10,7 +10,7 @@ object Form2: TForm2
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Tahoma'
+  Font.Name = 'Verdana'
   Font.Style = []
   OldCreateOrder = False
   PixelsPerInch = 96
@@ -3494,19 +3494,19 @@ object Form2: TForm2
   object EnterPass1: TLabel
     Left = 36
     Top = 24
-    Width = 232
-    Height = 18
-    Caption = #1047#1076#1088#1072#1074#1089#1090#1074#1091#1081#1090#1077'! '#1042#1074#1077#1076#1080#1090#1077' '#1087#1072#1088#1086#1083#1100':'
+    Width = 193
+    Height = 16
+    Caption = 'Hello! Enter the password:'
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWhite
-    Font.Height = -15
-    Font.Name = 'Arial'
+    Font.Height = -13
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object Hello: TLabel
     Left = 36
-    Top = 95
+    Top = 116
     Width = 4
     Height = 18
     Font.Charset = ANSI_CHARSET
@@ -3518,7 +3518,7 @@ object Form2: TForm2
   end
   object Question: TLabel
     Left = 36
-    Top = 119
+    Top = 144
     Width = 4
     Height = 18
     Font.Charset = RUSSIAN_CHARSET
@@ -3537,7 +3537,7 @@ object Form2: TForm2
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     NumbersOnly = True
     ParentFont = False
@@ -3554,7 +3554,7 @@ object Form2: TForm2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
@@ -3570,7 +3570,7 @@ object Form2: TForm2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
@@ -3586,7 +3586,7 @@ object Form2: TForm2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
@@ -3602,7 +3602,7 @@ object Form2: TForm2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 4
@@ -3618,7 +3618,7 @@ object Form2: TForm2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 7
@@ -3634,7 +3634,7 @@ object Form2: TForm2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 5
@@ -3650,7 +3650,7 @@ object Form2: TForm2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 8
@@ -3666,7 +3666,7 @@ object Form2: TForm2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 6
@@ -3682,7 +3682,7 @@ object Form2: TForm2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 9
@@ -3698,7 +3698,7 @@ object Form2: TForm2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 10
@@ -3713,8 +3713,8 @@ object Form2: TForm2
     Caption = 'CHECK'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
+    Font.Height = -12
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 11
@@ -3729,24 +3729,24 @@ object Form2: TForm2
     Caption = 'RESET'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
+    Font.Height = -12
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 12
     OnClick = Reset1Click
   end
   object ForgetPass: TButton
-    Left = 328
+    Left = 292
     Top = 231
-    Width = 105
-    Height = 22
+    Width = 169
+    Height = 26
     Cursor = crHandPoint
-    Caption = #1047#1072#1073#1099#1083#1080' '#1087#1072#1088#1086#1083#1100'?'
+    Caption = 'Forgot your password?'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 13
@@ -3754,7 +3754,7 @@ object Form2: TForm2
   end
   object Answer: TEdit
     Left = 36
-    Top = 142
+    Top = 170
     Width = 161
     Height = 26
     Color = clGradientInactiveCaption
@@ -3762,7 +3762,7 @@ object Form2: TForm2
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
-    Font.Name = 'Tahoma'
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     NumbersOnly = True
     ParentFont = False
@@ -3779,8 +3779,8 @@ object Form2: TForm2
     Enabled = False
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
+    Font.Height = -12
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 15
@@ -3796,8 +3796,8 @@ object Form2: TForm2
     Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
+    Font.Height = -12
+    Font.Name = 'Verdana'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 16
